@@ -1,0 +1,60 @@
+/*
+Project: VFW Project 2
+Name: Brent Marohnic
+Term: 1207
+Date: 2012-07-12 
+*/ 
+body {
+	background:lightgrey;
+}
+h1 {
+	
+	background-image: -webkit-linear-gradient(top, lightgrey 0%, grey 90%);
+	font-size:22px;
+	font-family:"Gill Sans MT";
+	text-align:center;
+	text-shadow:1px 1px #FFFFFF;
+	margin-bottom:-1px;
+	outline:2px solid black;
+	letter-spacing:0.1cm;
+	padding:15px;
+}
+
+form {
+	background:lightgrey;
+	outline:2px solid black;
+	padding:10px;
+	
+}
+
+a {
+	outline:1px dotted blue;
+}
+
+input {
+	background-image: -webkit-linear-gradient(top, #FFF 0%, #E2E2E2 90%);
+	border-radius: 5px;
+	box-shadow: 1px 1px #E2E2E2;
+}
+
+legend {
+	font-family:Courier;
+	font-variant:small-caps;
+	font-weight:bold;
+	font-size:larger;
+}
+
+fieldset {
+	border-radius: 5px;
+	box-shadow: 1px 1px #E2E2E2;
+}
+
+li {
+	list-style-position: inside;
+}
+
+textarea {
+	border-radius: 5px;
+	background-image: -webkit-linear-gradient(top, #FFF 0%, #E2E2E2 90%);
+	box-shadow: 1px 1px #E2E2E2;
+}

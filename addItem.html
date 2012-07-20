@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- Project: VFW Project 2 -->
+<!-- Name: Brent Marohnic -->
+<!-- Term: 1207 -->
+<!-- Date: 2012-07-12 -->
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="keywords" content="Vehicle Service Tracker App" />
+		<meta name="description" content="Keep your vehicles properly serviced" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no width=device-width" />
+		<title>Vehicle Maintenance Tracker</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+	</head>
+	<body>
+		<h1>Vehicle Maintenance Tracker</h1>
+		<form id=bigForm action="#" method="post">
+			<fieldset>
+				<legend>Vehicle Information</legend>
+				<ul id="errors"></ul>
+				<ul>
+					<label id="nameError" style="display: none">Enter your name</label>
+					<li><label for="owner">Owner:</label><input type="text" id="owner" /></li>
+					<li id="carMake"><label for="allMakes">Make:</label></li>
+					<li><label for="carModel">Model:</label><input type="text" id="carModel" /></li>
+					<li><label for="carMileage">Approximate Mileage:</label><input type="number" id="carMileage" min="30000" max="300000" step="5000" /></li>
+					<li>Transmission:
+						<ul>
+							<li><input type="radio" checked="checked" value="Automatic" id="automatic" name="transmission" /><label for="automatic">Automatic</label></li>
+							<li><input type="radio" value="Manual" id="manual" name="transmission" /><label for="manual">Manual</label></li>
+						</ul>
+					</li>
+					<li><label for="carCondition">Condition:</label>
+						<br><label for="carCondition"><small>Clunker</small></label><input type="range" id="carCondition" min=1 max=10 />
+							<label for="carCondition"><small>Excellent</small></label></li>
+					<li><label for="email">Owner's Email:</label><input type="email" id="email" placeholder="example@email.com" /></li>
+					<li><label for="url">Favorite Website:</label><input type="url" id="url" placeholder="www.caranddriver.com" /></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Maintenance</legend>
+				<ul>
+					<li>For which services would you like to be reminded:
+						<ul>
+							<li><input type="checkbox" checked="checked" value="Oil and Filter" id="oilAndFilter" /><label for="oilAndFilter">Oil and Filter</label></li>
+							<li><input type="checkbox" value="Tire Rotation" id="tireRotation" /><label for="tireRotation">Tire Rotation</label></li>
+							<li><input type="checkbox" value="Air Filter" id="airFilter" /><label for="airFilter">Air Filter</label></li>
+							<li><input type="checkbox" value="Cabin Filter" id="cabinFilter" /><label for="cabinFilter">Cabin Filter</label></li>
+							<li><input type="checkbox" value="Spark Plugs" id="sparkPlugs" /><label for="sparkPlugs">Spark Plugs</label></li>
+							<li><input type="checkbox" value="Brake Pads" id="brakePads" /><label for="brakePads">Brake Pads</label></li>
+							<li><input type="checkbox" value="Serpentine Belt" id="sBelt" /><label for="sBelt">Serpentine Belt</label></li>
+							<li><input type="checkbox" value="Timing Belt" id="tBelt" /><label for="tBelt">Timing Belt</label></li>
+						</ul>
+					</li>
+					<li><label for="lastOilChange">Date of last oil change:</label><input type="date" id="lastOilChange" min="2011-01-01" max="2012-06-28"/></li>
+					<li><label for="lastAirChange">Date of last air filter change:</label><input type="date" id="lastAirChange" min="2011-01-01" max="2012-06-28"/></li>
+					<li>Do-it-yourselfer?:
+						<ul>
+							<li><input type="radio" checked="checked" value="Handy" id="handy" name="handy" /><label for="handy">Handy</label></li>
+							<li><input type="radio" value="Not Handy" id="notHandy" name="handy" /><label for="notHandy">Not Handy</label></li>
+							<li><input type="radio" value="Unknown" id="noIdea" name="handy" /><label for="noIdea">I don't know</label></li>
+						</ul>	
+					</li>
+					<li>
+						<label for="shops">Preferred Service Providers</label>
+						<select id="shops">
+							<optgroup label="Specialty">
+								<option value="AAMCO">AAMCO</option>
+								<option value="Tire Kingdom">Tire Kingdom</option>
+							</optgroup>
+							<optgroup label="General Automotive">
+								<option value="Jiffy Lube">Jiffy Lube</option>
+								<option value="Tuffy">Tuffy</option>
+								<option value="Firestone">Firestone</option>
+								<option value="Valvoline">Valvoline</option>
+							</optgroup>
+						</select>
+					</li>
+					<li><label for="comments">Notes:</label><textarea id="comments">Reminders, areas of concern, etc..</textarea></li>
+					<li><input type="hidden" value="true" /></li>
+				</ul>
+			</fieldset>
+			<input id="saveIt"  type="submit" value="Save Vehicle Info" />
+		</form>
+		<a id="clearAll" href="#">Clear Stored Data</a>
+		<a href="#" style="visibility:hidden">xxxxx</a>
+		<a id="displayData" href="#">Display Data</a>
+		<a id="addNew" style="display:none" href="addItem.html">Add New</a>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
